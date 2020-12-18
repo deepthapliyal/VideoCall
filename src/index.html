@@ -40,7 +40,7 @@
         </div>
         
         
-        <nav class="navbar fixed-top bg-info rounded-0 d-print-none">
+        <nav class="navbar fixed-top bg-warning rounded-0 d-print-none">
             <div class="text-white">Video Call</div>
 
             <div class="pull-right room-comm" hidden>
@@ -125,15 +125,15 @@
         
         <div class="container-fluid room-comm" hidden>
             <div class="row">
-                <video class="local-video mirror-mode" id='local' volume='0' autoplay muted></video>
-            </div>
-            
-            <div class="row">
                 <div class="col-md-12 main" id='main-section'>                    
-                    <div class="row mt-2 mb-2" id='videos'></div>
+                    <div class="row mt-2 mb-2" id='videos'>
+                    	<div class="card card-sm" style="width: 50%;">
+                    		<video id='local' volume='0' autoplay muted class="remote-video" style="border:2px solid RGB(255,124,150)"></video>
+                    	</div>
+                    </div>
                 </div>
 
-                <div class="col-md-3 chat-col d-print-none mb-2 bg-info" id='chat-pane' hidden>
+                <div class="col-md-3 chat-col d-print-none mb-2 bg-warning" id='chat-pane' hidden>
                     <div class="row">
                         <div class="col-12 text-center h2 mb-3">CHAT</div>
                     </div>
@@ -146,5 +146,6 @@
                 </div>
             </div>
         </div>
+        
     </body>
 </html>
