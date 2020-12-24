@@ -64,7 +64,7 @@
                 </button>
 
                 <button class="btn btn-sm rounded-0 btn-no-effect text-white">
-                    <a href="/" class="text-white text-decoration-none"><i class="fa fa-sign-out-alt text-white" title="Leave"></i></a>
+                    <a href="http://192.168.10.146:8080/chat" class="text-white text-decoration-none"><i class="fa fa-sign-out-alt text-white" title="Leave"></i></a>
                 </button>
             </div>
         </nav>
@@ -81,12 +81,12 @@
 
                 <div class="col-12 col-md-4 offset-md-4 mb-3">
                     <label for="room-name">Room Name</label>
-                    <input type="text" id='room-name' class="form-control rounded-0" placeholder="Room Name">
+                    <input type="text" id='room-name' class="form-control rounded-0" placeholder="Room Name" readonly >
                 </div>
 
                 <div class="col-12 col-md-4 offset-md-4 mb-3">
                     <label for="your-name">Your Name</label>
-                    <input type="text" id='your-name' class="form-control rounded-0" placeholder="Your Name">
+                    <input type="text" id='your-name' class="form-control rounded-0" placeholder="Your Name" disabled>
                 </div>
 
                 <div class="col-12 col-md-4 offset-md-4 mb-3">
@@ -143,4 +143,14 @@
         </div>
         
     </body>
+<script>
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+document.getElementById('room-name').value=getParameterByName('a');
+document.getElementById('your-name').value=getParameterByName('b');
+</script>
 </html>

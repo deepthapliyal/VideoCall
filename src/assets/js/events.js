@@ -64,11 +64,13 @@ window.addEventListener( 'load', () => {
             sessionStorage.setItem( 'username', yourName );
 
             //create room link
-            let roomLink = `${ location.origin }?room=${ roomName.trim().replace( ' ', '_' ) }`;
+            //let roomLink = `${ location.origin }?room=${ roomName.trim().replace( ' ', '_' ) }`;
 
             //show message with link to room
-            document.querySelector( '#room-created' ).innerHTML = `Room successfully created. Click <a href='${ roomLink }'>here</a> to enter room. 
-                Share the room link with your partners.`;
+            //document.querySelector( '#room-created' ).innerHTML = `Room successfully created. Click <a href='${ roomLink }'>here</a> to enter room. 
+            //    Share the room link with your partners.`;
+
+			location.href=`${ location.origin }?room=${ roomName.trim().replace( ' ', '_' ) }`;
 
             //empty the values
             document.querySelector( '#room-name' ).value = '';
