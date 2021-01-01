@@ -14,6 +14,7 @@ let favicon = require( 'serve-favicon' );
 
 app.use( favicon( path.join( __dirname, 'favicon.ico' ) ) );
 app.use( '/assets', express.static( path.join( __dirname, 'assets' ) ) );
+app.use( '/neuralNets', express.static( path.join( __dirname, 'neuralNets' ) ) );
 
 app.get( '/', ( req, res ) => {
     res.sendFile( __dirname + '/index.html' );
