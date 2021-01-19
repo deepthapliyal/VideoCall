@@ -162,11 +162,7 @@ function init_scene(spec){
 
 // launched by body.onload():
 function main(){
-  DIV = document.getElementById('jeelizFaceFilterFollow');
-  if (!DIV){
-    alert('ERROR: You should have an element which id=jeelizFaceFilterFollow in the DOM. Abort.');
-    return;
-  }
+  //DIV = document.getElementById('jeelizFaceFilterFollow');
 
   JEEFACEFILTERAPI.init({
     canvasId: 'jeeFaceFilterCanvas',
