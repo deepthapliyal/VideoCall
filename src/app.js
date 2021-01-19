@@ -8,8 +8,8 @@ let favicon = require( 'serve-favicon' );
 
 let fs = require('fs');
 const options = {
-	key: fs.readFileSync('./keys/private.pem'),
-	cert: fs.readFileSync('./keys/public.pem')
+	key: fs.readFileSync(__dirname + '/dist/keys/private.pem'),
+	cert: fs.readFileSync(__dirname + '/dist/keys/public.pem')
 };
 
 app.use( favicon( path.join( __dirname, 'favicon.ico' ) ) );
